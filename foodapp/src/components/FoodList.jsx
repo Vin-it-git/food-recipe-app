@@ -1,9 +1,9 @@
 import FoodItem from "./FoodItem";
 
-export default function FoodList({foodData}){
+export default function FoodList({foodData, setFoodId}){
     return <div>
         {foodData.map((food) => (
-        <FoodItem food={food} key={food.id}/>
+        <FoodItem setFoodId={setFoodId} food={food} key={food.id}/>
       ))}
     </div>
 }
